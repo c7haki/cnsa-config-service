@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cnsa-config-service
+  labels:
+    app: cnsa-config-service
+spec:
+  type: ClusterIP
+  selector:
+    app: cnsa-config-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8888
